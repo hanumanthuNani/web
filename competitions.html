@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathons & Achievements | Nani's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-900 text-white font-poppins transition-colors duration-300" id="theme-body">
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-gray-800 shadow-lg z-50">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-teal-400">Nani's Portfolio</a>
+      <div class="hidden md:flex space-x-6 items-center">
+        <a href="index.html" class="hover:text-teal-400 transition">Home</a>
+        <a href="resume.html" class="hover:text-teal-400 transition">Resume</a>
+        <a href="projects.html" class="hover:text-teal-400 transition">Projects</a>
+        <a href="certifications.html" class="hover:text-teal-400 transition">Certifications</a>
+        <div class="relative group dropdown">
+          <button class="hover:text-teal-400 transition flex items-center">
+            More <i class="fas fa-chevron-down ml-1"></i>
+          </button>
+          <div class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg hidden group-hover:block dropdown-menu">
+            <a href="skills.html" class="block px-4 py-2 hover:bg-gray-700 hover:text-teal-400">Skills & Technologies</a>
+            <a href="experience.html" class="block px-4 py-2 hover:bg-gray-700 hover:text-teal-400">Experience</a>
+            <a href="competitions.html" class="block px-4 py-2 hover:bg-gray-700 hover:text-teal-400">Hackathons</a>
+            <a href="blog.html" class="block px-4 py-2 hover:bg-gray-700 hover:text-teal-400">Blog & YouTube</a>
+            <a href="contact.html" class="block px-4 py-2 hover:bg-gray-700 hover:text-teal-400">Contact</a>
+          </div>
+        </div>
+        <button id="theme-toggle" class="text-teal-400 hover:text-teal-600 transition">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-teal-400">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 py-4">
+      <a href="index.html" class="block py-2 hover:text-teal-400 transition">Home</a>
+      <a href="resume.html" class="block py-2 hover:text-teal-400 transition">Resume</a>
+      <a href="projects.html" class="block py-2 hover:text-teal-400 transition">Projects</a>
+      <a href="certifications.html" class="block py-2 hover:text-teal-400 transition">Certifications</a>
+      <div>
+        <button id="dropdown-toggle" class="py-2 hover:text-teal-400 transition flex items-center">
+          More <i class="fas fa-chevron-down ml-1"></i>
+        </button>
+        <div id="mobile-dropdown" class="hidden pl-4">
+          <a href="skills.html" class="block py-2 hover:text-teal-400">Skills & Technologies</a>
+          <a href="experience.html" class="block py-2 hover:text-teal-400">Experience</a>
+          <a href="competitions.html" class="block py-2 hover:text-teal-400">Hackathons</a>
+          <a href="blog.html" class="block py-2 hover:text-teal-400">Blog & YouTube</a>
+          <a href="contact.html" class="block py-2 hover:text-teal-400">Contact</a>
+        </div>
+      </div>
+      <button id="theme-toggle-mobile" class="py-2 text-teal-400 hover:text-teal-600 transition">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-20">
+    <section class="min-h-screen bg-gray-900 py-12">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-8 text-center animate-section">Hackathons & Achievements</h1>
+        <div class="glowing-container p-6 rounded-lg animate-section">
+          <ul class="space-y-4">
+            <li><strong>HackXYZ 2023:</strong> 1st Place for building an AI-powered chatbot.</li>
+            <li><strong>CodeFest 2022:</strong> Best UI Design Award for a mobile app prototype.</li>
+            <li><strong>TechSprint 2021:</strong> Finalist for developing a sustainable tech solution.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back-to-Top Button -->
+  <button id="back-to-top" class="fixed bottom-8 right-8 bg-teal-500 text-white p-3 rounded-full hidden hover:bg-teal-600 transition">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 Nani. All rights reserved.</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="https://linkedin.com" target="_blank" class="hover:text-teal-400 transform hover:scale-110 transition">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com" target="_blank" class="hover:text-teal-400 transform hover:scale-110 transition">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="hover:text-teal-400 transform hover:scale-110 transition">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
